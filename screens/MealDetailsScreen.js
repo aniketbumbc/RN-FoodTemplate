@@ -4,12 +4,33 @@ import { MEALS } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
 import Subtitle from '../components/MealDetail/Subtitle';
 import List from '../components/MealDetail/List';
+import { useLayoutEffect } from 'react';
+import IconButton from '../components/IconButton';
 
 function MealDetailsScreen() {
   const route = useRoute();
+  const navigation = useNavigation();
   const mealId = route.params.mealId;
 
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
+
+  function headerPressHandler() {
+    console.log('Hello press');
+  }
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => {
+        return (
+          <IconButton
+            onPress={headerPressHandler}
+            icon={'star'}
+            color={'white'}
+          />
+        );
+      },
+    });
+  }, [navigation, headerPressHandler]);
 
   return (
     <>
