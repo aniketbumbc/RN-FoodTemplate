@@ -25,7 +25,6 @@ function MealDetailsScreen() {
   const mealIsLiked = mealIds.includes(mealId);
 
   function changeFavoriteStatusHandler() {
-    console.log(mealId);
     if (mealIsLiked) {
       //favoriteMealsContext.removeFavorite(mealId);
       dispatch(
