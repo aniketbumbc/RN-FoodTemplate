@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FoodTemplate",
-    "slug": "FoodTemplate",
+    "name": "WhatForLunch",
+    "slug": "lunchmenu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,16 +13,24 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.aniketbbhavsar.whatforlunch"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "01c1ed6b-9afb-44e4-8b7e-973e45bfdf2c"
+      }
     }
   }
 }
